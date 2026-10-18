@@ -1,24 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Pura Cozinha — Jogo de Panelas 10 Peças" },
+      { name: "description", content: "Jogo de panelas antiaderentes 10 peças com frete grátis, 10% OFF no Pix e 12x sem juros." },
+      { property: "og:title", content: "Pura Cozinha — Jogo de Panelas 10 Peças" },
+      { property: "og:description", content: "Panelas antiaderentes, frete grátis e 10% OFF no Pix." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <iframe
+      src="/pura-cozinha.html"
+      title="Pura Cozinha — Jogo de Panelas 10 Peças"
+      className="fixed inset-0 h-full w-full border-0"
+    />
   );
 }
