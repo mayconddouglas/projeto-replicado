@@ -11,3 +11,8 @@
 
 ## Media portability
 - The standalone storefront must use verified absolute HTTPS URLs for Lovable-hosted video assets, because root-relative Lovable asset paths are not served by external hosts such as Vercel.
+
+## Checkout architecture
+- Keep the original storefront in its iframe and navigate to the native checkout using same-origin, source-checked messages to preserve the uploaded design.
+- Guest orders are accessible only through validated server functions and a hashed random order capability; browser roles have no table access to protect customer data.
+- Never mark payment approved from redirects, iframe messages or customer clicks; only a verified provider integration may approve payment.

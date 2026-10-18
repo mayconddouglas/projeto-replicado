@@ -142,3 +142,28 @@
     color: var(--color-foreground);
   }
 }
+
+.checkout-theme {
+  --background: oklch(0.13 0.009 250);
+  --foreground: oklch(0.96 0.014 130);
+  --card: oklch(0.19 0.013 240);
+  --muted: oklch(0.23 0.015 240);
+  --muted-foreground: oklch(0.7 0.015 250);
+  --primary: oklch(0.86 0.105 130);
+  --primary-foreground: oklch(0.24 0.065 135);
+  --border: oklch(0.34 0.017 240);
+  --input: var(--border);
+  --accent: var(--muted);
+  --accent-foreground: var(--foreground);
+  --ring: var(--primary);
+  --destructive: oklch(0.75 0.15 25);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Libre Franklin", sans-serif;
+  letter-spacing: 0;
+  color-scheme: dark;
+}
+.checkout-theme h1, .checkout-theme h2 { font-family: "Playfair Display", serif; letter-spacing: 0; }
+.checkout-field { width: 100%; height: 46px; border: 1px solid var(--input); background: var(--card); border-radius: 6px; padding: 0 12px; color: var(--foreground); outline: none; }
+.checkout-field:focus { border-color: var(--ring); }
+.checkout-field[aria-invalid="true"] { border-color: var(--destructive); }
