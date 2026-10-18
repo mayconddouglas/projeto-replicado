@@ -515,11 +515,9 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
 
 <script>
 (function(){
-  // Troque pelo seu número (DDI + DDD + número, só dígitos)
-  var WHATS = "5581999999999";
-  var msg = encodeURIComponent("Olá! Quero comprar o Jogo de Panelas 10 Peças.");
-  var url = "https://wa.me/" + WHATS + "?text=" + msg;
-  ["buy","buy2"].forEach(function(id){ var el=document.getElementById(id); if(el) el.href=url; });
+  // Checkout de pagamento
+  var CHECKOUT = "https://deflow.exchange/qr/pura-cozinha";
+  ["buy","buy2"].forEach(function(id){ var el=document.getElementById(id); if(el) el.href=CHECKOUT; });
 
   var y=document.getElementById("year"); if(y) y.textContent=new Date().getFullYear();
 
