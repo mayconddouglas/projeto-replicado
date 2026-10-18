@@ -14,7 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      checkout_orders: {
+        Row: {
+          access_token_hash: string
+          amount_cents: number
+          confirmed_at: string | null
+          created_at: string
+          currency: string
+          customer: Json
+          id: string
+          status: string
+        }
+        Insert: {
+          access_token_hash: string
+          amount_cents?: number
+          confirmed_at?: string | null
+          created_at?: string
+          currency?: string
+          customer: Json
+          id?: string
+          status?: string
+        }
+        Update: {
+          access_token_hash?: string
+          amount_cents?: number
+          confirmed_at?: string | null
+          created_at?: string
+          currency?: string
+          customer?: Json
+          id?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
