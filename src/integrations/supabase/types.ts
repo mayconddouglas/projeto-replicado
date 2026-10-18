@@ -23,6 +23,7 @@ export type Database = {
           currency: string
           customer: Json
           id: string
+          request_hash: string | null
           status: string
         }
         Insert: {
@@ -33,6 +34,7 @@ export type Database = {
           currency?: string
           customer: Json
           id?: string
+          request_hash?: string | null
           status?: string
         }
         Update: {
@@ -43,6 +45,7 @@ export type Database = {
           currency?: string
           customer?: Json
           id?: string
+          request_hash?: string | null
           status?: string
         }
         Relationships: []

@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,8 +16,18 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const navigate = useNavigate();
+  const iframe = useRef<HTMLIFrameElement>(null);
+  useEffect(() => {
+    const listener = (event: MessageEvent) => {
+      if (event.origin === window.location.origin && event.source === iframe.current?.contentWindow && event.data?.type === "pura-checkout") navigate({ to: "/checkout" });
+    };
+    window.addEventListener("message", listener);
+    return () => window.removeEventListener("message", listener);
+  }, [navigate]);
   return (
     <iframe
+      ref={iframe}
       src="/pura-cozinha.html"
       title="Pura Cozinha — Jogo de Panelas 10 Peças"
       className="fixed inset-0 h-full w-full border-0"
