@@ -326,6 +326,15 @@ export default function CheckoutPage() {
                   <Button className="w-full h-12 bg-[#bce19c] text-[#112607] font-bold mt-4">
                     Continuar
                   </Button>
+                  <div className="mt-6 flex flex-col items-center gap-3 text-xs text-[#9aa3ad]">
+                    <div className="flex gap-4">
+                      <span className="flex items-center gap-1">
+                        <Lock className="w-3 h-3" /> Compra Segura
+                      </span>
+                      <span className="flex items-center gap-1">⚡ Envio Rápido</span>
+                    </div>
+                    <p className="text-center">Garantia de 7 dias ou seu dinheiro de volta</p>
+                  </div>
                 </form>
               </div>
             )}
@@ -350,6 +359,15 @@ export default function CheckoutPage() {
                 >
                   Confirmar e Ir para Pagamento
                 </Button>
+                <div className="mt-6 flex flex-col items-center gap-3 text-xs text-[#9aa3ad]">
+                  <div className="flex gap-4">
+                    <span className="flex items-center gap-1">
+                      <Lock className="w-3 h-3" /> Compra Segura
+                    </span>
+                    <span className="flex items-center gap-1">⚡ Envio Rápido</span>
+                  </div>
+                  <p className="text-center">Garantia de 7 dias ou seu dinheiro de volta</p>
+                </div>
               </div>
             )}
             {step === 3 && (
@@ -361,6 +379,15 @@ export default function CheckoutPage() {
                     Abrir Pagamento Pix na Deflow
                   </Button>
                 </a>
+                <div className="mt-6 flex flex-col items-center gap-3 text-xs text-[#9aa3ad]">
+                  <div className="flex gap-4">
+                    <span className="flex items-center gap-1">
+                      <Lock className="w-3 h-3" /> Compra Segura
+                    </span>
+                    <span className="flex items-center gap-1">⚡ Envio Rápido</span>
+                  </div>
+                  <p className="text-center">Garantia de 7 dias ou seu dinheiro de volta</p>
+                </div>
               </div>
             )}
           </div>

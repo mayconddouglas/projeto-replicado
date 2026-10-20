@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const CHECKOUT_URL = "https://deflow.exchange/qr/pura-cozinha";
-export const PRICE_CENTS = 35991;
-export const ORIGINAL_PRICE_CENTS = 39990;
-export const DISCOUNT_CENTS = 3999;
+export const PRICE_CENTS = 13990;
+export const ORIGINAL_PRICE_CENTS = 34990;
+export const DISCOUNT_CENTS = 21000;
 export const formatPrice = (cents: number) =>
   (cents / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 

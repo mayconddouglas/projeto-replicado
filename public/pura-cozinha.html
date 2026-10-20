@@ -215,6 +215,8 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
   .sticky{display:none}
   footer{padding-bottom:40px}
 }
+
+.fade-out{opacity:0;transition:opacity 0.5s ease;}
 </style>
 </head>
 <body>
@@ -316,7 +318,7 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
               <li>Uma garantia e um atendimento só</li>
               <li>Chega tudo pronto, numa compra só</li>
             </ul>
-            <div class="vs-price">R$ 359,91</div><span class="vs-note">no Pix · ou 12x de R$ 33,33</span>
+            <div class="vs-price">R$ 139,90</div><span class="vs-note">no Pix · ou 12x de R$ 11,65</span>
           </div>
         </div>
       </div>
@@ -340,6 +342,7 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
       </div>
     </div>
   </section>
+
 
   <section id="kit">
     <div class="wrap kit">
@@ -387,10 +390,10 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
         <p class="lead">Cada detalhe foi escolhido para dar segurança na cozinha e anos de uso.</p>
       </div>
       <div class="grid four">
-        <div class="card reveal"><div class="num">01</div><h3>Alumínio forjado</h3><p>Resistente, leve e com excelente condução de calor.</p></div>
-        <div class="card reveal d1"><div class="num">02</div><h3>Revestimento livre de PFOA</h3><p>Antiaderente reforçado, seguro para sua família.</p></div>
-        <div class="card reveal d2"><div class="num">03</div><h3>Cabos térmicos</h3><p>Ergonômicos e confortáveis, sem esquentar na hora de segurar.</p></div>
-        <div class="card reveal d3"><div class="num">04</div><h3>Tampas de vidro</h3><p>Vidro temperado para acompanhar o cozimento sem abrir.</p></div>
+        <div class="card reveal"><div class="num">01</div><h3>Cozinha de revista</h3><p>Transforme o visual da sua cozinha, estilo Pinterest, sem gastar com reformas.</p></div>
+        <div class="card reveal d1"><div class="num">02</div><h3>Mais tempo livre</h3><p>Esqueça comida grudada e horas esfregando panelas na pia. Curta sua família.</p></div>
+        <div class="card reveal d2"><div class="num">03</div><h3>Cozinhe com prazer</h3><p>Cabos ergonômicos e design que tornam o ato de cozinhar leve e prazeroso.</p></div>
+        <div class="card reveal d3"><div class="num">04</div><h3>Refeições perfeitas</h3><p>Tampas que permitem acompanhar o ponto sem precisar abrir e perder calor.</p></div>
       </div>
       <div class="cmpw reveal">
         <table class="cmp">
@@ -438,11 +441,15 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
         <h2>Leve o jogo completo para casa</h2>
       </div>
       <div class="price-card reveal d1">
+        <div style="background:var(--blush);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:0.85rem;font-weight:700;margin-bottom:12px;display:inline-block;">
+          ⚠️ Apenas 5 kits restantes com este desconto
+        </div>
         <span class="tag pulse">Melhor preço no Pix</span>
-        <div class="old">De R$ 599,90</div>
-        <div class="price"><small>R$</small> 359<small>,91</small></div>
-        <div class="inst"><b>à vista no Pix</b> · 10% OFF</div>
-        <div class="alt">No cartão: R$ 399,90 em até 12x de R$ 33,33 sem juros</div>
+        <div class="old">De R$ 349,90</div>
+        <div class="price"><small>R$</small> 139<small>,90</small></div>
+        <div class="inst"><b>à vista no Pix</b></div>
+        <div style="margin-top:8px;font-size:0.85rem;color:var(--accent);">⏰ Oferta expira em breve</div>
+        <div class="alt">No cartão: R$ 139,90 em até 12x de R$ 11,65 sem juros</div>
         <ul>
           <li>10% OFF pagando no Pix</li>
           <li>10 peças (5 panelas + 5 tampas)</li>
@@ -450,8 +457,15 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
           <li>Garantia de 1 ano</li>
           <li>Troca em até 7 dias</li>
         </ul>
-        <a class="btn" id="buy" href="#" target="_blank" rel="noopener">Quero pagar no Pix</a>
-        <p class="secure"><svg class="i"><use href="#lock"/></svg> Compra 100% segura e protegida</p>
+        <a class="btn" id="buy" href="#" target="_blank" rel="noopener" style="flex-direction:column;gap:4px;height:auto;padding:12px 16px;">
+          <span style="font-size:1rem;">GARANTIR MEU KIT COM DESCONTO</span>
+          <span style="font-size:0.75rem;opacity:0.9;">+ FRETE GRÁTIS</span>
+        </a>
+        <div style="display:flex;justify-content:center;gap:12px;margin-top:14px;font-size:0.75rem;color:var(--muted);">
+          <span style="display:flex;align-items:center;gap:4px;"><svg class="i"><use href="#lock"/></svg> 100% Segura</span>
+          <span style="display:flex;align-items:center;gap:4px;">⚡ Envio Rápido</span>
+          <span style="display:flex;align-items:center;gap:4px;">💳 Pix ou Cartão</span>
+        </div>
       </div>
     </div>
   </section>
@@ -504,12 +518,12 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
         <p>contato@puracozinha.com.br</p>
       </div>
     </div>
-    <p class="copy">© <span id="year">2026</span> Pura Cozinha · CNPJ 00.000.000/0001-00 · Todos os direitos reservados.</p>
+    <p class="copy">© <span id="year">2026</span> Pura Cozinha · CNPJ 77.928.009/0001-91 · Todos os direitos reservados.</p>
   </div>
 </footer>
 
 <div class="sticky" id="sticky">
-  <div><b>R$ 359,91</b><span>no Pix · 10% OFF</span></div>
+  <div><b>R$ 139,90</b><span>à vista no Pix</span></div>
   <a class="btn sm" id="buy2" href="#" target="_blank" rel="noopener">Comprar</a>
 </div>
 
@@ -517,12 +531,15 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
 (function(){
   // Checkout de pagamento
   function goToCheckout(event){
-    if(window.parent!==window){
-      event.preventDefault();
-      window.parent.postMessage({type:"pura-checkout"},window.location.origin);
-    } else {
-      window.location.href="/checkout";
-    }
+    event.preventDefault();
+    document.body.classList.add("fade-out");
+    setTimeout(function(){
+      if(window.parent!==window){
+        window.parent.postMessage({type:"pura-checkout"},window.location.origin);
+      } else {
+        window.location.href="/checkout";
+      }
+    }, 500);
   }
 
   ["buy","buy2"].forEach(function(id){
