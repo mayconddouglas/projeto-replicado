@@ -84,16 +84,226 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 .stars{color:var(--accent);letter-spacing:2px;font-size:.9rem;margin-bottom:10px}
 
 /* offer */
-.offer{background:var(--sand)}
-.price-card{max-width:440px;margin:34px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px 26px;text-align:center}
-.old{color:var(--muted);text-decoration:line-through;font-size:.95rem}
-.price{font-family:var(--serif);font-size:2.9rem;font-weight:600;line-height:1.1;margin:4px 0}
-.price small{font-size:1rem}
-.inst{color:var(--muted);font-size:.92rem}
-.price-card ul{list-style:none;padding:0;margin:22px 0;text-align:left;font-size:.94rem}
-.price-card li{padding:7px 0 7px 26px;position:relative}
-.price-card li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-.price-card .btn{width:100%}
+.offer{background:var(--sand);padding:68px 0}
+.price-card{
+  max-width:440px;
+  margin:28px auto 0;
+  background:#ffffff;
+  border:1px solid #cac4ce;
+  border-radius:24px;
+  padding:32px 24px 24px;
+  text-align:center;
+  box-shadow:0 14px 38px -6px rgba(36, 32, 56, 0.08);
+  position:relative;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.price-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 46px -6px rgba(36, 32, 56, 0.12);
+}
+
+.price-urgency{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:#ede9f6;
+  color:#725ac1;
+  border:1px solid rgba(114, 90, 193, 0.22);
+  padding:5px 13px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  margin-bottom:16px;
+}
+.live-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#725ac1;
+  position:relative;
+}
+.live-dot::after{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  border-radius:50%;
+  border:1.5px solid #725ac1;
+  animation:pulseRing 1.8s cubic-bezier(0.24,0,0.38,1) infinite;
+}
+@keyframes pulseRing{
+  0%{transform:scale(0.8);opacity:1}
+  100%{transform:scale(2.2);opacity:0}
+}
+
+.price-anchor{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-bottom:4px;
+}
+.old{
+  color:var(--muted);
+  text-decoration:line-through;
+  font-size:.92rem;
+}
+.save-tag{
+  background:#ede9f6;
+  color:#725ac1;
+  font-size:.72rem;
+  font-weight:700;
+  padding:2px 7px;
+  border-radius:6px;
+  letter-spacing:.03em;
+}
+
+.price-main{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:2px;
+  font-family:var(--serif);
+  color:#242038;
+  line-height:1;
+  margin:4px 0 6px;
+}
+.price-main .curr{
+  font-size:1.3rem;
+  font-weight:600;
+  color:#6b6582;
+  margin-right:2px;
+}
+.price-main .val{
+  font-size:3.5rem;
+  font-weight:700;
+  letter-spacing:-.02em;
+  color:#242038;
+}
+.price-main .cents{
+  font-size:1.4rem;
+  font-weight:600;
+  color:#6b6582;
+}
+
+.price-condition{
+  font-size:.88rem;
+  color:#242038;
+  font-weight:500;
+  line-height:1.4;
+}
+.price-condition strong{
+  color:#725ac1;
+  font-weight:700;
+}
+.price-installment{
+  font-size:.8rem;
+  color:#6b6582;
+  margin-top:3px;
+}
+
+.price-card hr{
+  border:0;
+  border-top:1px solid #cac4ce;
+  opacity:0.7;
+  margin:20px 0 18px;
+}
+
+.price-card ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 22px;
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.price-card li{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:.9rem;
+  color:#242038;
+  line-height:1.35;
+}
+.price-check{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#ede9f6;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.price-check svg{
+  width:11px;
+  height:11px;
+  stroke:#725ac1;
+  stroke-width:2.5;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.price-cta{
+  width:100%;
+  background:#725ac1;
+  color:#ffffff;
+  border:0;
+  border-radius:14px;
+  padding:15px 20px;
+  font-family:var(--sans);
+  text-decoration:none;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  box-shadow:0 8px 22px -3px rgba(114, 90, 193, 0.38);
+  transition:all .2s ease;
+}
+.price-cta:hover{
+  background:#5f47b0;
+  transform:translateY(-1px);
+  box-shadow:0 10px 26px -2px rgba(114, 90, 193, 0.45);
+}
+.price-cta:active{
+  transform:scale(0.99);
+}
+.price-cta .cta-title{
+  font-size:1.02rem;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+.price-cta .cta-desc{
+  font-size:.74rem;
+  opacity:0.92;
+  font-weight:500;
+}
+
+.price-guarantees{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:14px;
+  font-size:.75rem;
+  color:#6b6582;
+}
+.price-guarantees span{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
+.price-guarantees svg{
+  width:13px;
+  height:13px;
+  stroke:#725ac1;
+  stroke-width:1.8;
+  fill:none;
+}
 
 /* faq */
 details{border-bottom:1px solid var(--line);padding:18px 0}
@@ -161,7 +371,6 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
 .tag{display:inline-block;background:var(--blush);color:var(--accent);padding:6px 14px;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
 .pulse{animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(1.06)}}
-.price-card{border:2px solid var(--accent)}
 .alt{margin-top:10px;font-size:.85rem;color:var(--muted);background:var(--sand);border-radius:12px;padding:10px 12px}
 .secure{margin-top:14px;font-size:.8rem;color:var(--muted);text-align:center}
 .trust{padding:44px 0 8px}
@@ -441,30 +650,59 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
         <h2>Leve o jogo completo para casa</h2>
       </div>
       <div class="price-card reveal d1">
-        <div style="background:var(--blush);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:0.85rem;font-weight:700;margin-bottom:12px;display:inline-block;">
-          ⚠️ Apenas 5 kits restantes com este desconto
+        <div class="price-urgency">
+          <span class="live-dot"></span>
+          <span>Últimas 4 unidades com 60% OFF</span>
         </div>
-        <span class="tag pulse">Melhor preço no Pix</span>
-        <div class="old">De R$ 349,90</div>
-        <div class="price"><small>R$</small> 139<small>,90</small></div>
-        <div class="inst"><b>à vista no Pix</b></div>
-        <div style="margin-top:8px;font-size:0.85rem;color:var(--accent);">⏰ Oferta expira em breve</div>
-        <div class="alt">No cartão: R$ 139,90 em até 12x de R$ 11,65 sem juros</div>
+
+        <div class="price-anchor">
+          <span class="old">De R$ 349,90</span>
+          <span class="save-tag">Economize R$ 210</span>
+        </div>
+
+        <div class="price-main">
+          <span class="curr">R$</span>
+          <span class="val">139</span>
+          <span class="cents">,90</span>
+        </div>
+
+        <div class="price-condition">à vista no <strong>Pix</strong> · 10% OFF já aplicado</div>
+        <div class="price-installment">ou em até <strong>12x de R$ 11,65</strong> sem juros no cartão</div>
+
+        <hr>
+
         <ul>
-          <li>10% OFF pagando no Pix</li>
-          <li>10 peças (5 panelas + 5 tampas)</li>
-          <li>Frete grátis para todo o Brasil</li>
-          <li>Garantia de 1 ano</li>
-          <li>Troca em até 7 dias</li>
+          <li>
+            <span class="price-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><strong>Jogo completo 10 peças</strong> (5 panelas + 5 tampas)</span>
+          </li>
+          <li>
+            <span class="price-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><strong>Frete Grátis</strong> para todo o Brasil com rastreamento</span>
+          </li>
+          <li>
+            <span class="price-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><strong>Antiaderente Cerâmico</strong> que não gruda e limpa fácil</span>
+          </li>
+          <li>
+            <span class="price-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><strong>Garantia de 1 ano</strong> direto de fábrica</span>
+          </li>
+          <li>
+            <span class="price-check"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span><strong>Garantia incondicional de 7 dias</strong> para testar sem riscos</span>
+          </li>
         </ul>
-        <a class="btn" id="buy" href="#" target="_blank" rel="noopener" style="flex-direction:column;gap:4px;height:auto;padding:12px 16px;">
-          <span style="font-size:1rem;">GARANTIR MEU KIT COM DESCONTO</span>
-          <span style="font-size:0.75rem;opacity:0.9;">+ FRETE GRÁTIS</span>
+
+        <a class="price-cta" id="buy" href="/checkout">
+          <span class="cta-title">Garantir Meu Kit com 60% OFF →</span>
+          <span class="cta-desc">Frete Grátis Incluso · Envio Imediato</span>
         </a>
-        <div style="display:flex;justify-content:center;gap:12px;margin-top:14px;font-size:0.75rem;color:var(--muted);">
-          <span style="display:flex;align-items:center;gap:4px;"><svg class="i"><use href="#lock"/></svg> 100% Segura</span>
-          <span style="display:flex;align-items:center;gap:4px;">⚡ Envio Rápido</span>
-          <span style="display:flex;align-items:center;gap:4px;">💳 Pix ou Cartão</span>
+
+        <div class="price-guarantees">
+          <span><svg class="i"><use href="#lock"/></svg> Compra Segura</span>
+          <span><svg class="i"><use href="#shield"/></svg> Garantia 7 Dias</span>
+          <span><svg class="i"><use href="#truck"/></svg> Envio Rápido</span>
         </div>
       </div>
     </div>
