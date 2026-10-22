@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#060709">
+<meta name="theme-color" content="#f7ece1">
 <title>Pura Cozinha — Jogo de Panelas 10 Peças</title>
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* paleta: #060709 #BCE19C #112607 #767E89 #323B42 */
-  --bg:#060709;--surface:#12171b;--sand:#0c1709;--blush:#112607;
-  --ink:#edf3e8;--muted:#9aa3ad;--accent:#bce19c;--accent-ink:#112607;--line:#323b42;
-  --pot:#323b42;--lid:#767e89;--handle:#bce19c;color-scheme:dark;
+  /* Paleta: Midnight Violet #242038, Slate Blue #725AC1, Soft Periwinkle #8D86C9, Pale Slate #CAC4CE, Linen #F7ECE1 */
+  --bg:#f7ece1;--surface:#ffffff;--sand:#ede5dc;--blush:#ede9f6;
+  --ink:#242038;--muted:#6b6582;--accent:#725ac1;--accent-ink:#ffffff;--line:#cac4ce;
+  --pot:#242038;--lid:#8d86c9;--handle:#725ac1;color-scheme:light;
   --serif:"Playfair Display",Georgia,"Times New Roman",serif;
   --sans:"Libre Franklin",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   box-sizing:border-box;
@@ -114,11 +114,11 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
 
 /* extras */
 .art{max-width:560px}
-.art video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:36px;border:1px solid var(--line);box-shadow:0 22px 50px rgba(0,0,0,.45);background:var(--surface);pointer-events:none}
+.art video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:36px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(36,32,56,.10);background:var(--surface);pointer-events:none}
 .demo{background:var(--blush)}
 .demo-grid{display:grid;gap:34px;align-items:center}
 .demo-media{justify-self:center;width:100%;max-width:340px}
-.demo-media img{width:100%;height:auto;display:block;border-radius:36px;border:1px solid var(--line);box-shadow:0 22px 50px rgba(0,0,0,.45)}
+.demo-media img{width:100%;height:auto;display:block;border-radius:36px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(36,32,56,.10)}
 .checks{list-style:none;padding:0;margin:22px 0 28px}
 .checks li{padding:9px 0 9px 28px;position:relative;font-size:.96rem}
 .checks li::before{content:"\2713";position:absolute;left:0;color:var(--accent);font-weight:700}
@@ -173,7 +173,7 @@ footer{padding:36px 0 110px;text-align:center;color:var(--muted);font-size:.85re
 .ico svg{transition:stroke .35s ease}
 .js .card.reveal{transition-property:opacity,transform,border-color,box-shadow;transition-duration:.7s,.35s,.35s,.35s}
 @media (hover:hover){
-  .js .card.reveal.in:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 14px 34px rgba(188,225,156,.10)}
+  .js .card.reveal.in:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 14px 34px rgba(114,90,193,.16)}
   .card:hover .ico{transform:scale(1.1) rotate(-6deg);background:var(--accent)}
   .card:hover .ico svg{stroke:var(--accent-ink)}
 }
